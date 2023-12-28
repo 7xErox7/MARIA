@@ -15,7 +15,6 @@ Um projeto educativo que se propõe a criar um sistema de registro de entradas e
  - Interface construída com [Electron](https://www.electronjs.org)
 ### 4. Armazenamento
  - Implementação de armazenamento local para otimizar o desempenho
- - 
 ## Contato
 Para dúvidas, comentários ou sugestões, entre em contato conosco através dos seguintes canais:
 - Email: erodev09@gmail.com

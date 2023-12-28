@@ -1,0 +1,68 @@
+{
+  "name": "Maria",
+  "description": "Um projeto para fins educativos, que consiste em um sistema que registra entradas e saidas e responde de maneira inteligente.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Erito",
+    "email": "erodev09@gmail.com",
+    "url": "erodev.website"
+  },
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "chcp 65001 && yarn build && yarn start",
+    "build": "tsc && npx tailwindcss -c tailwind.config.js -i ./views/tailwind.css -o ./views/style.css",
+    "start": "electron .",
+    "package": "electron-builder"
+  },
+  "build": {
+    "productName": "Maria",
+    "appId": "website.erodev.maria",
+    "files": [
+      "dist/**/*",
+      "views/**/*",
+      "assets/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "output": "../MARIA@1.0.0"
+    },
+    "extends": null,
+    "asar": true,
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.5",
+    "electron": "^28.1.0",
+    "electron-builder": "^24.9.1",
+    "tailwindcss": "^3.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "moment-timezone": "^0.5.43",
+    "socket.io": "^4.7.2"
+  }
+}
